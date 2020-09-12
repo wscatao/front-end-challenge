@@ -15,9 +15,7 @@ const BlogProvider = ({ children }) => {
   };
 
   return (
-    <BlogContext.Provider value={contextValue}>
-      {children}
-    </BlogContext.Provider>
+    <BlogContext.Provider value={contextValue}>{children}</BlogContext.Provider>
   );
 };
 
