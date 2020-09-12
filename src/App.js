@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import BlogContext from './context/BlogContext';
 import { getLastPosts } from './data/Data';
 
-function App() {
-  const teste = getLastPosts();
-  teste.then(({headers}) => console.log(headers));
-  return (
-    <div>
-     Hello world
-    </div>
-  );
-}
+const App = () => {
+  const { setPosts , setNumberOfPages } = useContext(BlogContext);
+  useEffect(() => {
+    const loadContext = async () => {
+      const { headers, data } = await getLastPosts();
+      setPosts([...data]);
+      setNumberOfPages(parseInt(headers['x-wp-totalpages']));
+    };
+
+    loadContext();
+  }, []);
+
+  return <div>Hello world</div>;
+};
 
 export default App;
