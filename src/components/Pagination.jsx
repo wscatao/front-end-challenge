@@ -5,7 +5,7 @@ const Pagination = (props) => {
   const { totalPages, handleClick } = props;
   const pages = [];
 
-  for (let i = 1; i < totalPages; i += 1) {
+  for (let i = 1; i <= totalPages; i += 1) {
     pages.push(i);
   }
 

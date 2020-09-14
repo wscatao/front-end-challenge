@@ -40,6 +40,7 @@ const Home = () => {
             key={post.id}
             title={post.title.rendered}
             img={post[embedded]}
+            slug={post.slug}
           />
         ))}
 
