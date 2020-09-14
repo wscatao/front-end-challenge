@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import './css/index.css';
 import App from './App';
@@ -8,11 +9,12 @@ import * as serviceWorker from './serviceWorker';
 import BlogProvider from './context/BlogProvider';
 
 ReactDOM.render(
-  <React.StrictMode>
+  // eslint-disable-next-line react/jsx-filename-extension
+  <Router>
     <BlogProvider>
       <App />
     </BlogProvider>
-  </React.StrictMode>,
+  </Router>,
   document.getElementById('root'),
 );
 
