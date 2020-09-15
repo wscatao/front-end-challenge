@@ -26,7 +26,7 @@ const Home = () => {
         setPosts([...data]);
       })
       .catch((err) => setError(err));
-  }, [selectedPage]);
+  }, [selectedPage, setNumberOfPages, setPosts]);
 
   return (
     <div>

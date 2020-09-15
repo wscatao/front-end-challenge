@@ -36,4 +36,16 @@ export const getLastPosts = async (pageNumber) => {
   }
 };
 
-export default getLastPosts;
+export const getPostDetails = async (slug) => {
+  try {
+    const response = await axios.get(baseURL, {
+      params: {
+        slug,
+      },
+    });
+
+    return response;
+  } catch (err) {
+    return err;
+  }
+};
