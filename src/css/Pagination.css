@@ -1,0 +1,16 @@
+.page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.page__button {
+  font-family: 'IBM Plex Mono', monospace;
+  margin-left: 0.5em;
+  border: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: #DFD9E2;
+  color: #000;
+}

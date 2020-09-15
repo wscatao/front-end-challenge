@@ -1,0 +1,61 @@
+.readpost {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.readpost__header {
+  position: relative;
+  min-height: 200px;
+  top: 0;
+  width: 100%;
+  background-color: #538083;
+}
+
+.readpost__title {
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.readpost__footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 200px;
+  background-color: #538083;
+}
+
+.readpost__card {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  width: 100%;
+  height: fit-content;
+  background-color: #2a7f62;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  flex-wrap: wrap;
+}
+
+.readpost__card__gravatar {
+  margin: 1em;
+  border-radius: 5px;
+}
+
+.readpost__card__author {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #FFF;
+}
+
+.readpost__card__description {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #FFF;
+  width: 80%;
+  padding: 2em;
+}

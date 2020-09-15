@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../css/Pagination.css';
+
 const Pagination = (props) => {
   const { totalPages, handleClick } = props;
   const pages = [];
@@ -10,18 +12,19 @@ const Pagination = (props) => {
   }
 
   return (
-    <p>
+    <div className="page">
       {pages.map((page) => (
         <button
           key={page}
           type="button"
           onClick={(e) => handleClick(e.target.value)}
           value={page}
+          className="page__button"
         >
           {page}
         </button>
       ))}
-    </p>
+    </div>
   );
 };
 

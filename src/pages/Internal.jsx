@@ -15,7 +15,7 @@ const Internal = () => {
   }, [slug]);
 
   return (
-    <div>
+    <div className="internal">
       {details && details[0].id ? (
         <ReadPost
           title={details[0].title}

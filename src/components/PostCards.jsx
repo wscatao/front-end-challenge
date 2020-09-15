@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import note from '../img/default.jpg';
+import '../css/PostCards.css';
 
 const PostCards = (props) => {
   const { img, title, slug } = props;
@@ -20,10 +21,13 @@ const PostCards = (props) => {
   const { alt_text: altText, source_url: sourceUrl } = imgProps;
 
   return (
-    <div>
-      <h2>{title}</h2>
-      <img src={sourceUrl} alt={altText} />
-      <Link to={`/internal/${slug}`}>Link</Link>
+    <div className="card">
+      <img src={sourceUrl} alt={altText} className="card__img" />
+      <div className="card__container">
+        <Link to={`/internal/${slug}`} className="card__link">
+          {title}
+        </Link>
+      </div>
     </div>
   );
 };

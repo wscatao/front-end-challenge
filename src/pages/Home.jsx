@@ -30,23 +30,30 @@ const Home = () => {
   }, [selectedPage, setNumberOfPages, setPosts]);
 
   return (
-    <div className="container">
-      {error && <p>Houve um erro...</p>}
+    <>
+      <div className="header">
+        <div className="header__overlay">
+          <h1 className="header__title">Blog da Apiki...</h1>
+        </div>
+      </div>
+      <div className="container">
+        {error && <p>Houve um erro...</p>}
 
-      {posts &&
-        posts.length > 1 &&
-        error === null &&
-        posts.map((post) => (
-          <PostCards
-            key={post.id}
-            title={post.title.rendered}
-            img={post[embedded]}
-            slug={post.slug}
-          />
-        ))}
+        {posts &&
+          posts.length > 1 &&
+          error === null &&
+          posts.map((post) => (
+            <PostCards
+              key={post.id}
+              title={post.title.rendered}
+              img={post[embedded]}
+              slug={post.slug}
+            />
+          ))}
 
-      <Pagination totalPages={numberOfPages} handleClick={selectPage} />
-    </div>
+        <Pagination totalPages={numberOfPages} handleClick={selectPage} />
+      </div>
+    </>
   );
 };
 
