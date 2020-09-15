@@ -8,7 +8,6 @@ const Internal = () => {
   const { slug } = useParams();
   const [details, setDetails] = useState(null);
   const embedded = '_embedded';
-  const featuredmedia = 'wp:featuredmedia';
 
   useEffect(() => {
     const state = getPostDetails(slug);

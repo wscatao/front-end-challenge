@@ -5,6 +5,7 @@ import BlogContext from '../context/BlogContext';
 import PostCards from '../components/PostCards';
 import Pagination from '../components/Pagination';
 import { getLastPosts } from '../data/Data';
+import '../css/Home.css';
 
 const Home = () => {
   const { numberOfPages, posts, setPosts, setNumberOfPages } = useContext(
@@ -29,7 +30,7 @@ const Home = () => {
   }, [selectedPage, setNumberOfPages, setPosts]);
 
   return (
-    <div>
+    <div className="container">
       {error && <p>Houve um erro...</p>}
 
       {posts &&
